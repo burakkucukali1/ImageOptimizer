@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css")   
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/css/style.css")
+        link(rel="stylesheet" href="/css/forms.css")
+        title Image Optimizer
+
+    body
+        form(action="/optimizeImg" method="POST" enctype="multipart/form-data")
+            .form-group.row
+            label(for="imageUrl").col-sm-2.col-form-label Image
+            .col-sm-10
+                input.form-control-file#image(type="file" accept="image/*" name="myImage" required="true")
+            .form-group.row
+            .col-sm-10
+                input(type="submit" value="Optimize ! ").btn.btn-primary
+        h3=link
